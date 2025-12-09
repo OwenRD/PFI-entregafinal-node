@@ -1,0 +1,53 @@
+import * as productService from "../services/products.services.js"
+
+export const getAllProductsController = async (req, res) => {
+    try {
+        const product = await productService.getAllProductsService()
+        console.log(product)
+        res.status(200).json(product) 
+    } catch (error) {
+        res.status(500).send()
+    }
+}
+
+export const getProductByIdController = async (req, res) => {
+    try {
+        const id = req.params.id
+        if(id){
+            const product = await productService.getProductByIdService(id)
+            if(product) {
+                res.status(200).json(product)
+            }else{
+                res.status(404).json({message: "Producto no encontrado"})
+            }
+        }else{
+            res.status(400).json(error)
+        }
+    } catch (error) {
+        res.status(500).send()
+    }
+}
+
+export const addProductController = async (req, res) => {
+    try {
+        const product = req.body
+        const newProduct = await productService.addProductService(product)
+        res.status(200).json(newProduct)
+    } catch (error) {
+        res.status(500).send()
+    }
+}
+
+export const deleteProductController = async (req, res) => {
+    try {
+        const id = req.params.id
+        if(id){
+            await productService.deleteProductService(id)
+            res.sendStatus(200)
+        }else{
+            res.status(400).json(error)
+        }
+    } catch (error) {
+        res.status(500).send()
+    }
+}
