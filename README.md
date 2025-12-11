@@ -45,7 +45,7 @@ Esta sección detalla los métodos, rutas y funciones clave de la API. La base U
 | **POST** | `/api/login` | **Inicio de Sesión.** Envía las credenciales y devuelve un JWT si son válidas. | Pública |
 | **GET** | `/api/products` | **Listar Productos.** Obtiene una lista de todos los productos disponibles en la base de datos. | Pública |
 | **GET** | `/api/products/:id` | **Ver Producto.** Obtiene los detalles de un producto específico, identificado por su ID. | Pública |
-| **POST** | `/api/products` | **Crear Producto.** Recibe los datos de un nuevo producto en el cuerpo (Body) y lo guarda en la base de datos. | **Sí** (Auth) |
+| **POST** | `/api/products/create` | **Crear Producto.** Recibe los datos de un nuevo producto en el cuerpo (Body) y lo guarda en la base de datos. | **Sí** (Auth) |
 | **DELETE** | `/api/products/:id` | **Eliminar Producto.** Elimina un producto de la base de datos, identificado por su ID. | **Sí** (Auth) |
 
 ---
