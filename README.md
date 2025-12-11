@@ -30,7 +30,7 @@ La arquitectura de la API sigue un patrón de **Controlador-Servicio-Modelo (CSM
 
 ## Endpoints de la API
 
-Esta sección detalla los métodos, rutas y funciones clave de la API. La base URL para todos los *endpoints* es `http://pfi-entregafinal-node.vercel.ap/`.
+Esta sección detalla los métodos, rutas y funciones clave de la API. La base URL para todos los *endpoints* es `http://pfi-entregafinal-node.vercel.app/`.
 
 ### Requisitos de Seguridad
 
@@ -92,5 +92,3 @@ Ejecuta la aplicación:
 
 ```bash
 npm start
-# o si usas nodemon para desarrollo:
-# npm run dev
